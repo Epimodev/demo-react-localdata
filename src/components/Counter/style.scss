@@ -1,0 +1,28 @@
+.container {
+  position: relative;
+  width: 500px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.title {
+  font-weight: 400;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  background-color: yellowgreen;
+  color: white;
+  border-radius: 50%;
+}
+
+.value {
+
+}
+
+.resetButton {
+  display: block;
+  width: 100px;
+  color: grey;
+}
