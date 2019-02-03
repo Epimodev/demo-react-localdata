@@ -1,3 +1,8 @@
+@import "app-colors";
+
 body {
-  font-family: 'open-sans';
+  font-family: 'avenir';
+  font-weight: 800;
+  background-color: $background;
+  color: white;
 }

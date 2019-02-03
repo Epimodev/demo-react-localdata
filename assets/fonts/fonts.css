@@ -1,43 +1,54 @@
 @font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Light-webfont.eot');
-  src: url('OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-       url('OpenSans-Light-webfont.woff') format('woff'),
-       url('OpenSans-Light-webfont.ttf') format('truetype'),
-       url('OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+  font-family: "avenir";
+  src: url('avenir-300.eot');
+  src: url('avenir-300.eot?#iefix') format('embedded-opentype'),
+       url('avenir-300.woff') format('woff'),
+       url('avenir-300.ttf') format('truetype'),
+       url('avenir-300.svg#open_sanslight') format('svg');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Regular-webfont.eot');
-  src: url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('OpenSans-Regular-webfont.woff') format('woff'),
-       url('OpenSans-Regular-webfont.ttf') format('truetype'),
-       url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
-  font-weight: normal;
+  font-family: "avenir";
+  src: url('avenir-400.eot');
+  src: url('avenir-400.eot?#iefix') format('embedded-opentype'),
+       url('avenir-400.woff') format('woff'),
+       url('avenir-400.ttf') format('truetype'),
+       url('avenir-400.svg#open_sanslight') format('svg');
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Semibold-webfont.eot');
-  src: url('OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('OpenSans-Semibold-webfont.woff') format('woff'),
-       url('OpenSans-Semibold-webfont.ttf') format('truetype'),
-       url('OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
-  font-weight: 600;
+  font-family: "avenir";
+  src: url('avenir-500.eot');
+  src: url('avenir-500.eot?#iefix') format('embedded-opentype'),
+       url('avenir-500.woff') format('woff'),
+       url('avenir-500.ttf') format('truetype'),
+       url('avenir-500.svg#open_sanslight') format('svg');
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'open-sans';
-  src: url('OpenSans-Bold-webfont.eot');
-  src: url('OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('OpenSans-Bold-webfont.woff') format('woff'),
-       url('OpenSans-Bold-webfont.ttf') format('truetype'),
-       url('OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+  font-family: "avenir";
+  src: url('avenir-700.eot');
+  src: url('avenir-700.eot?#iefix') format('embedded-opentype'),
+       url('avenir-700.woff') format('woff'),
+       url('avenir-700.ttf') format('truetype'),
+       url('avenir-700.svg#open_sanslight') format('svg');
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "avenir";
+  src: url('avenir-800.eot');
+  src: url('avenir-800.eot?#iefix') format('embedded-opentype'),
+       url('avenir-800.woff') format('woff'),
+       url('avenir-800.ttf') format('truetype'),
+       url('avenir-800.svg#open_sanslight') format('svg');
+  font-weight: 800;
   font-style: normal;
 }

@@ -7,7 +7,7 @@ const LocalstateCounter: FC = () => {
 
   return (
     <Counter
-      title="Local state counter (not persist in browser storage)"
+      title="Runtime state counter (not persist in browser storage)"
       value={count}
       onChange={setCount}
       onReset={resetCount}

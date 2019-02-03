@@ -13,11 +13,9 @@ const defaultLocaldata: AppLocaldata = {
 
 function Application() {
   return (
-    <div>
-      <LocaldataProvider defaultData={defaultLocaldata}>
-        <CounterPage />
-      </LocaldataProvider>
-    </div>
+    <LocaldataProvider defaultData={defaultLocaldata}>
+      <CounterPage />
+    </LocaldataProvider>
   );
 }
 

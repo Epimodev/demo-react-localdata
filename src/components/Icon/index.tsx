@@ -1,17 +1,14 @@
-import { createElement } from 'react';
+import { createElement, FC } from 'react';
 
 interface Props {
   href: string;
   className?: string;
 }
 
-function Icon(props: Props) {
-  const { href, className = '' } = props;
-  return (
-    <svg className={className}>
-      <use xlinkHref={href} />
-    </svg>
-  );
-}
+const Icon: FC<Props> = ({ href, className }) => (
+  <svg className={className}>
+    <use xlinkHref={href} />
+  </svg>
+);
 
 export default Icon;
