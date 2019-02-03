@@ -3,6 +3,14 @@ import { Localdata } from 'react-localdata';
 import { AppLocaldataProps } from 'src/Application/types';
 import Counter from 'src/components/Counter';
 
+const title = (
+  <span>
+    Browser storage
+    <br />
+    using render props pattern
+  </span>
+);
+
 const RenderpropsCounter: FC = () => (
   <Localdata>
     {({ localdata, saveLocaldata, removeLocaldata }: AppLocaldataProps) => {
@@ -10,14 +18,7 @@ const RenderpropsCounter: FC = () => (
       const setCount = (value: number) => saveLocaldata({ counter1: value });
       const resetCount = () => removeLocaldata('counter1');
 
-      return (
-        <Counter
-          title="Browser storage using render props pattern"
-          value={count}
-          onChange={setCount}
-          onReset={resetCount}
-        />
-      );
+      return <Counter title={title} value={count} onChange={setCount} onReset={resetCount} />;
     }}
   </Localdata>
 );

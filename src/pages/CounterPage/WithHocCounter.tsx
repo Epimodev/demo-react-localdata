@@ -7,19 +7,20 @@ interface ComponentProps {}
 
 interface Props extends ComponentProps, AppLocaldataProps {}
 
+const title = (
+  <span>
+    Browser storage
+    <br />
+    using withLocaldata HOC
+  </span>
+);
+
 const WithHocCounter: FC<Props> = ({ localdata, saveLocaldata, removeLocaldata }) => {
   const count = localdata.counter3;
   const setCount = (value: number) => saveLocaldata({ counter3: value });
   const resetCount = () => removeLocaldata('counter3');
 
-  return (
-    <Counter
-      title="Browser storage using withLocaldata HOC"
-      value={count}
-      onChange={setCount}
-      onReset={resetCount}
-    />
-  );
+  return <Counter title={title} value={count} onChange={setCount} onReset={resetCount} />;
 };
 
 export default withLocaldata<ComponentProps>(WithHocCounter as any);
