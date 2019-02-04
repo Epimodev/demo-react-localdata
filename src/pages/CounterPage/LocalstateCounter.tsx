@@ -1,6 +1,10 @@
 import { createElement, useState, FC } from 'react';
 import Counter from 'src/components/Counter';
 
+interface Props {
+  className?: string;
+}
+
 const title = (
   <span>
     Runtime state counter
@@ -9,11 +13,19 @@ const title = (
   </span>
 );
 
-const LocalstateCounter: FC = () => {
+const LocalstateCounter: FC<Props> = ({ className }) => {
   const [count, setCount] = useState(0);
   const resetCount = () => setCount(0);
 
-  return <Counter title={title} value={count} onChange={setCount} onReset={resetCount} />;
+  return (
+    <Counter
+      className={className}
+      title={title}
+      value={count}
+      onChange={setCount}
+      onReset={resetCount}
+    />
+  );
 };
 
 export default LocalstateCounter;

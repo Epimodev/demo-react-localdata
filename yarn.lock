@@ -6056,6 +6056,13 @@ send@0.16.2:
     range-parser "~1.2.0"
     statuses "~1.4.0"
 
+sento-transition@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/sento-transition/-/sento-transition-0.1.3.tgz#8e07ed1832edc223ba7973973fb95921492c2b7e"
+  integrity sha512-kpq/tpu+nlCx31f18pdClMY2O36GIYfuXnqSguIytxSOr/9URbKo0bTy0tmz7ztq7zy4hJFtXaZabEWDN1c5BQ==
+  dependencies:
+    classnames "^2.2.6"
+
 serialize-to-js@^1.1.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/serialize-to-js/-/serialize-to-js-1.2.1.tgz#2e87f61f938826d24c463a7cbd0dd2929ec38008"

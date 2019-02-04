@@ -1,0 +1,40 @@
+.enter {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.enterActive {
+  opacity: 1;
+  transform: scale(1);
+  animation: scaleAnim linear 700ms;
+}
+
+.exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.exitActive {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: 500ms !important;
+}
+
+@keyframes scaleAnim {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

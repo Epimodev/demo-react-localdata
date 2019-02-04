@@ -1,4 +1,5 @@
 import { createElement, FC, ReactNode } from 'react';
+import classnames from 'classnames';
 import Button from 'src/components/Button';
 import ClearButton from 'src/components/ClearButton';
 import Icon from 'src/components/Icon';
@@ -10,14 +11,15 @@ interface Props {
   value: number;
   onChange: (value: number) => void;
   onReset: () => void;
+  className?: string;
 }
 
-const Counter: FC<Props> = ({ title, value, onChange, onReset }) => {
+const Counter: FC<Props> = ({ title, value, onChange, onReset, className }) => {
   const increment = () => onChange(value + 1);
   const decrement = () => onChange(value - 1);
 
   return (
-    <div className={style.container}>
+    <div className={classnames(style.container, className)}>
       <h3 className={style.title}>{title}</h3>
       <div className={style.counter}>
         <Button className={style.decrementButton} onClick={decrement}>
