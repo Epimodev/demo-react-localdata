@@ -1,9 +1,7 @@
 import { createElement, FC, ReactNode } from 'react';
 import classnames from 'classnames';
-import Button from 'src/components/Button';
+import ArrowButton from 'src/components/ArrowButton';
 import ClearButton from 'src/components/ClearButton';
-import Icon from 'src/components/Icon';
-import arrowIcon from 'src/icons/arrow.svg';
 import * as style from './style.scss';
 
 interface Props {
@@ -22,13 +20,9 @@ const Counter: FC<Props> = ({ title, value, onChange, onReset, className }) => {
     <div className={classnames(style.container, className)}>
       <h3 className={style.title}>{title}</h3>
       <div className={style.counter}>
-        <Button className={style.decrementButton} onClick={decrement}>
-          <Icon href={arrowIcon} className={style.arrowIcon} />
-        </Button>
+        <ArrowButton className={style.decrementButton} direction="left" onClick={decrement} />
         <div className={style.value}>{value}</div>
-        <Button className={style.incrementButton} onClick={increment}>
-          <Icon href={arrowIcon} className={style.arrowIcon} />
-        </Button>
+        <ArrowButton className={style.incrementButton} direction="right" onClick={increment} />
         <ClearButton className={style.resetButton} onClick={onReset}>
           RESET
         </ClearButton>

@@ -1,20 +1,6 @@
 @import "app-colors";
 @import "responsive";
 
-@mixin counterButton {
-  z-index: 10;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 35px;
-  height: 50px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
 .container {
   width: 320px;
   flex-shrink: 0;
@@ -43,12 +29,7 @@
 }
 
 .decrementButton {
-  @include counterButton;
   left: 40px;
-
-  .arrowIcon {
-    transform: rotate(180deg);
-  }
 
   @include phone {
     left: 30px;
@@ -56,17 +37,11 @@
 }
 
 .incrementButton {
-  @include counterButton;
   right: 40px;
 
   @include phone {
     right: 30px;
   }
-}
-
-.arrowIcon {
-  width: 25px;
-  height: 40px;
 }
 
 .value {
