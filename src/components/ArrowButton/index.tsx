@@ -39,16 +39,17 @@ class ArrowButton extends Component<Props> {
       return;
     }
 
-    const clonedIcon = this.buttonRef.current.children[0].cloneNode(true) as HTMLSpanElement;
-    this.buttonRef.current.appendChild(clonedIcon);
+    const circle = document.createElement('span');
+    circle.className = style.circle;
+    this.buttonRef.current.appendChild(circle);
     setTimeout(() => {
-      clonedIcon.className += ` ${style.iconContainer_fadeOut}`;
+      circle.className = `${style.circle} ${style.circle_fadeout}`;
     }, 20);
     setTimeout(() => {
       if (!this.buttonRef.current) {
         return;
       }
-      this.buttonRef.current.removeChild(clonedIcon);
+      this.buttonRef.current.removeChild(circle);
     }, 540);
   }
 
@@ -62,9 +63,7 @@ class ArrowButton extends Component<Props> {
         className={classnames(style.button, className)}
         onClick={this.handleClick}
       >
-        <span className={style.iconContainer}>
-          <Icon href={arrowIcon} className={iconClassName} />
-        </span>
+        <Icon href={arrowIcon} className={iconClassName} />
       </Button>
     );
   }
