@@ -26,18 +26,18 @@ const CounterPage: FC = () => {
       </header>
       <div className={style.counters}>
         <div className={style.countersGroup}>
-          <ScaleAnim delay={300}>
+          <ScaleAnim delay={400}>
             <LocalstateCounter />
           </ScaleAnim>
-          <ScaleAnim delay={400}>
+          <ScaleAnim delay={500}>
             <RenderpropsCounter />
           </ScaleAnim>
         </div>
         <div className={style.countersGroup}>
-          <ScaleAnim delay={500}>
+          <ScaleAnim delay={600}>
             <UseContextCounter />
           </ScaleAnim>
-          <ScaleAnim delay={600}>
+          <ScaleAnim delay={700}>
             <WithHocCounter />
           </ScaleAnim>
         </div>
