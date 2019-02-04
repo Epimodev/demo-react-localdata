@@ -20,9 +20,19 @@ const Counter: FC<Props> = ({ title, value, onChange, onReset, className }) => {
     <div className={classnames(style.container, className)}>
       <h3 className={style.title}>{title}</h3>
       <div className={style.counter}>
-        <ArrowButton className={style.decrementButton} direction="left" onClick={decrement} />
+        <ArrowButton
+          name="decrement"
+          className={style.decrementButton}
+          direction="left"
+          onClick={decrement}
+        />
         <div className={style.value}>{value}</div>
-        <ArrowButton className={style.incrementButton} direction="right" onClick={increment} />
+        <ArrowButton
+          name="increment"
+          className={style.incrementButton}
+          direction="right"
+          onClick={increment}
+        />
         <ClearButton className={style.resetButton} onClick={onReset}>
           RESET
         </ClearButton>

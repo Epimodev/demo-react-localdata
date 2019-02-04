@@ -6,6 +6,7 @@ import Icon from '../Icon';
 import * as style from './style.scss';
 
 interface Props {
+  name: string;
   direction: 'left' | 'right' | 'top' | 'bottom';
   onClick: () => void;
   className?: string;
@@ -54,12 +55,13 @@ class ArrowButton extends Component<Props> {
   }
 
   render() {
-    const { direction, className } = this.props;
+    const { name, direction, className } = this.props;
     const iconClassName = classnames(style.icon, iconClassNamesMap[direction]);
 
     return (
       <Button
         ref={this.buttonRef}
+        aria-label={name}
         className={classnames(style.button, className)}
         onClick={this.handleClick}
       >

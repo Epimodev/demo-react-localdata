@@ -9,8 +9,10 @@ interface Props {
   className?: string;
 }
 
-const ClearButton: FC<Props> = ({ className, ...props }) => (
-  <Button className={classnames(style.clearButton, className)} {...props} />
+const ClearButton: FC<Props> = ({ className, children, ...props }) => (
+  <Button aria-label={children} className={classnames(style.clearButton, className)} {...props}>
+    {children}
+  </Button>
 );
 
 ClearButton.displayName = 'ClearButton';

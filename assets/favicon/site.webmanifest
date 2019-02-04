@@ -1,6 +1,6 @@
 {
     "name": "react-localdata demo",
-    "short_name": "react-localdata",
+    "short_name": "react demo",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
