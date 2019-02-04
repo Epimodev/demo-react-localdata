@@ -1,4 +1,5 @@
 @import "app-colors";
+@import "responsive";
 
 @mixin counterButton {
   z-index: 10;
@@ -18,8 +19,11 @@
   width: 320px;
   flex-shrink: 0;
 
-  &:last-child {
-    margin-right: 0;
+  @include big-phone {
+    margin-bottom: 40px;
+  }
+  @include phone {
+    width: 300px;
   }
 }
 
@@ -45,11 +49,19 @@
   .arrowIcon {
     transform: rotate(180deg);
   }
+
+  @include phone {
+    left: 30px;
+  }
 }
 
 .incrementButton {
   @include counterButton;
   right: 40px;
+
+  @include phone {
+    right: 30px;
+  }
 }
 
 .arrowIcon {

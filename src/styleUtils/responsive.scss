@@ -1,11 +1,19 @@
-@mixin phone {
-  @media only screen and (max-width: 400px) {
+@mixin max-width($maxWidth) {
+  @media only screen and (max-width: $maxWidth) {
     @content;
   }
 }
 
-@mixin tablet {
-  @media only screen and (max-width: 768px) {
+@mixin phone {
+  @include max-width(359px) {
     @content;
-  }
+  };
 }
+
+@mixin big-phone {
+  @include max-width(767px) {
+    @content;
+  };
+}
+
+
