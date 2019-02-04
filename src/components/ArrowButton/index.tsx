@@ -30,11 +30,26 @@ class ArrowButton extends Component<Props> {
   }
 
   handleClick() {
-    const { onClick } = this.props;
+    this.createClickMicroInteraction();
+    this.props.onClick();
+  }
 
-    console.log('HANDLE CLICK');
+  createClickMicroInteraction() {
+    if (!this.buttonRef.current) {
+      return;
+    }
 
-    onClick();
+    const clonedIcon = this.buttonRef.current.children[0].cloneNode(true) as HTMLSpanElement;
+    this.buttonRef.current.appendChild(clonedIcon);
+    setTimeout(() => {
+      clonedIcon.className += ` ${style.iconContainer_fadeOut}`;
+    }, 20);
+    setTimeout(() => {
+      if (!this.buttonRef.current) {
+        return;
+      }
+      this.buttonRef.current.removeChild(clonedIcon);
+    }, 540);
   }
 
   render() {
@@ -47,7 +62,9 @@ class ArrowButton extends Component<Props> {
         className={classnames(style.button, className)}
         onClick={this.handleClick}
       >
-        <Icon href={arrowIcon} className={iconClassName} />
+        <span className={style.iconContainer}>
+          <Icon href={arrowIcon} className={iconClassName} />
+        </span>
       </Button>
     );
   }

@@ -8,22 +8,30 @@
   width: 45px;
   height: 60px;
   margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  transition: 500ms;
+}
 
-  &:focus {
-    border-color: $background;
-  }
+.iconContainer {
+  position: relative;
+  z-index: 2;
+  display: block;
+  transition: 500ms;
+}
+.iconContainer_fadeOut {
+  z-index: 1;
+  opacity: 0;
+  transform: scale(2.5);
 }
 
 .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 25px;
   height: 40px;
+  margin: auto;
 }
 
 .icon_left {
