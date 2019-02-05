@@ -1,7 +1,7 @@
 {
-  "name": "react-parcel-boilerplate",
+  "name": "demo-react-localdata",
   "version": "1.0.0",
-  "description": "Boilerplate to create react app with parcel",
+  "description": "Demo of react-localdata",
   "main": "src/index.html",
   "author": "Frederic Godin",
   "license": "MIT",
