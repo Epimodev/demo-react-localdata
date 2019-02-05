@@ -16,6 +16,7 @@
   bottom: 0;
   width: 80px;
   background: linear-gradient(90deg, rgba($counter_background, 0) 0%, $counter_background 30%);
+  border-radius: 10px;
 }
 
 .cacheLeft {
@@ -26,6 +27,7 @@
   left: 0;
   width: 80px;
   background: linear-gradient(90deg, $counter_background 70%, rgba(138, 157, 248, 0) 100%);
+  border-radius: 10px;
 }
 
 .value {
