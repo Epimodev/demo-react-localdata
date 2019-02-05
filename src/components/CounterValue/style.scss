@@ -1,0 +1,52 @@
+@import "app-colors";
+
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.cacheRight {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 80px;
+  background: linear-gradient(90deg, rgba($counter_background, 0) 0%, $counter_background 30%);
+}
+
+.cacheLeft {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  background: linear-gradient(90deg, $counter_background 70%, rgba(138, 157, 248, 0) 100%);
+}
+
+.value {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 160px;
+  margin: auto;
+  line-height: 160px;
+  text-align: center;
+  font-size: 50px;
+  transition: 500ms;
+}
+
+.value_atLeft {
+  transform: translateX(-100%);
+}
+
+.value_atRight {
+  transform: translateX(100%);
+}

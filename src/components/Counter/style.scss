@@ -26,9 +26,11 @@
   height: 160px;
   border-radius: 10px;
   background-color: $counter_background;
+  overflow: hidden;
 }
 
 .decrementButton {
+  z-index: 11;
   left: 40px;
 
   @include phone {
@@ -37,24 +39,12 @@
 }
 
 .incrementButton {
+  z-index: 11;
   right: 40px;
 
   @include phone {
     right: 30px;
   }
-}
-
-.value {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100px;
-  margin: auto;
-  line-height: 160px;
-  text-align: center;
-  font-size: 50px;
 }
 
 .resetButton {

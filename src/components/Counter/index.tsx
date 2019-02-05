@@ -1,6 +1,7 @@
 import { createElement, FC, ReactNode } from 'react';
 import classnames from 'classnames';
 import ArrowButton from 'src/components/ArrowButton';
+import CounterValue from 'src/components/CounterValue';
 import ClearButton from 'src/components/ClearButton';
 import * as style from './style.scss';
 
@@ -26,7 +27,7 @@ const Counter: FC<Props> = ({ title, value, onChange, onReset, className }) => {
           direction="left"
           onClick={decrement}
         />
-        <div className={style.value}>{value}</div>
+        <CounterValue value={value} />
         <ArrowButton
           name="increment"
           className={style.incrementButton}
